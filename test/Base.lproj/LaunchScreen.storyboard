@@ -16,24 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Test" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hYZ-JO-l7F">
-                                <rect key="frame" x="259" y="282" width="82" height="36"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opengraph" translatesAutoresizingMaskIntoConstraints="NO" id="4gM-iS-gdX">
+                                <rect key="frame" x="240" y="240" width="120" height="120"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="8aP-dC-t2c"/>
+                                    <constraint firstAttribute="height" constant="120" id="EO9-0G-TTH"/>
+                                    <constraint firstAttribute="width" constant="120" id="e23-JI-144"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.39035590898969452" blue="0.075648901740122954" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.97724050971289111" green="0.92605225444921813" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hYZ-JO-l7F" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4pN-zu-MyH"/>
-                            <constraint firstItem="hYZ-JO-l7F" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ndu-9W-tqb"/>
-                            <constraint firstItem="hYZ-JO-l7F" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="262" id="o5k-Xn-0bo"/>
+                            <constraint firstItem="4gM-iS-gdX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="O0F-QO-LtN"/>
+                            <constraint firstItem="4gM-iS-gdX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ctC-cC-5Za"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="opengraph" width="500" height="500"/>
+    </resources>
 </document>
