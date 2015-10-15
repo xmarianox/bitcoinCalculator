@@ -103,33 +103,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Importe en Pesos" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgY-5i-7kU">
-                                <rect key="frame" x="20" y="139" width="560" height="30"/>
+                                <rect key="frame" x="20" y="254" width="560" height="30"/>
                                 <animations/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
-                                <rect key="frame" x="524" y="201" width="56" height="30"/>
+                                <rect key="frame" x="524" y="316" width="56" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad de BTC..." textAlignment="center" lineBreakMode="characterWrap" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="trX-J8-gx8">
+                                <rect key="frame" x="20" y="150" width="560" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7U5-yB-Pae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="FGC-JI-bu1" secondAttribute="trailing" id="0z9-oT-Qkk"/>
+                            <constraint firstItem="wgY-5i-7kU" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="190" id="5ni-MO-FrZ"/>
                             <constraint firstItem="FGC-JI-bu1" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="19" id="5vX-Vs-Emj"/>
+                            <constraint firstItem="trX-J8-gx8" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="86" id="GKr-99-FfJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wgY-5i-7kU" secondAttribute="trailing" id="N5b-qe-isn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="trX-J8-gx8" secondAttribute="trailing" id="Voh-rh-7Ad"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FGC-JI-bu1" secondAttribute="leading" id="ZcG-7K-NGw"/>
-                            <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="137" id="bvo-J1-he1"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="trX-J8-gx8" secondAttribute="leading" id="bLJ-wf-7Ta"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wgY-5i-7kU" secondAttribute="leading" id="iif-jq-YbA"/>
                             <constraint firstItem="FGC-JI-bu1" firstAttribute="centerY" secondItem="0Fk-hQ-oCj" secondAttribute="centerY" id="mVf-bK-0Nb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DcE-P7-RGP" secondAttribute="trailing" id="oPw-is-RLP"/>
-                            <constraint firstItem="wgY-5i-7kU" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="75" id="s0b-Hu-iSR"/>
+                            <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" constant="252" id="wgg-ok-c0J"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -137,6 +150,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnCalc" destination="DcE-P7-RGP" id="XYa-ZY-F2n"/>
+                        <outlet property="inputPesosValue" destination="wgY-5i-7kU" id="WPb-o5-hvV"/>
+                        <outlet property="resultView" destination="trX-J8-gx8" id="9Hx-E8-2AT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKc-6c-5rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
