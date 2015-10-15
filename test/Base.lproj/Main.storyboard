@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1953" y="2"/>
         </scene>
-        <!--View Controller-->
+        <!--View Detail Btc Controller-->
         <scene sceneID="vkW-mb-jlM">
             <objects>
-                <viewController id="08H-bI-Mfg" sceneMemberID="viewController">
+                <viewController id="08H-bI-Mfg" customClass="ViewDetailBtcController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GRD-9x-zFU"/>
                         <viewControllerLayoutGuide type="bottom" id="Umf-EK-lst"/>
@@ -176,6 +176,30 @@
                                 <rect key="frame" x="20" y="83" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Importe en BTC" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkD-yY-5al">
+                                <rect key="frame" x="20" y="254" width="560" height="30"/>
+                                <animations/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="j9o-dB-ZkA">
+                                <rect key="frame" x="524" y="316" width="56" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad de AR$..." textAlignment="center" lineBreakMode="characterWrap" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fwe-kb-ak6">
+                                <rect key="frame" x="20" y="150" width="560" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sgx-xa-teC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -199,14 +223,35 @@
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="2ia-A0-VqK" secondAttribute="leading" id="EKA-NC-bnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2ia-A0-VqK" secondAttribute="trailing" id="HHg-zN-Foi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nkD-yY-5al" secondAttribute="trailing" id="KDp-PR-mWc"/>
+                            <constraint firstItem="nkD-yY-5al" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="190" id="MLq-iq-08U"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iwo-P9-G3j" secondAttribute="leading" id="T7q-Nl-7S0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Fwe-kb-ak6" secondAttribute="leading" id="VqE-4t-Vwh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JWZ-5o-RE1" secondAttribute="trailing" id="XgP-ZE-aO4"/>
+                            <constraint firstItem="j9o-dB-ZkA" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="252" id="dCK-Nd-CJG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j9o-dB-ZkA" secondAttribute="trailing" id="g8p-3K-8EQ"/>
                             <constraint firstItem="2ia-A0-VqK" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="75" id="gk5-la-xbE"/>
                             <constraint firstItem="iwo-P9-G3j" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="19" id="hs2-va-BRd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nkD-yY-5al" secondAttribute="leading" id="l9r-KN-oAh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iwo-P9-G3j" secondAttribute="trailing" id="ngE-Pe-iAh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fwe-kb-ak6" secondAttribute="trailing" id="pgB-Jz-QL7"/>
                             <constraint firstItem="JWZ-5o-RE1" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="137" id="twg-91-UwP"/>
+                            <constraint firstItem="Fwe-kb-ak6" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="86" id="v57-mo-hE0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JWZ-5o-RE1"/>
+                                <exclude reference="2ia-A0-VqK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnCalc" destination="j9o-dB-ZkA" id="3MP-JK-P71"/>
+                        <outlet property="inputBitcoinValue" destination="nkD-yY-5al" id="cQq-Wr-7A3"/>
+                        <outlet property="inputBtcValue" destination="nkD-yY-5al" id="wi0-9h-gzT"/>
+                        <outlet property="resultLabel" destination="Fwe-kb-ak6" id="Rn8-7W-eJY"/>
+                        <outlet property="resultView" destination="Fwe-kb-ak6" id="I8V-Fd-aZp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3H-lG-6bD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,9 +266,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.95686274510000002" green="0.54901960780000003" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.97724050969999998" green="0.92605225440000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
