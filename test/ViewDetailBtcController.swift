@@ -11,13 +11,13 @@ import UIKit
 class ViewDetailBtcController: UIViewController {
     
     @IBOutlet weak var inputBitcoinValue: UITextField!
-    @IBOutlet weak var btnCalc: UIButton!
+    @IBOutlet weak var btnCalcBtc: UIButton!
     @IBOutlet weak var resultView: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add action
-        btnCalc.addTarget(self, action: "btnClicked:", forControlEvents: .TouchUpInside)
+        btnCalcBtc.addTarget(self, action: "btnClicked:", forControlEvents: .TouchUpInside)
     }
     
     override func didReceiveMemoryWarning() {

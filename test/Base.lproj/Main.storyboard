@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -163,7 +164,7 @@
         <!--View Detail Btc Controller-->
         <scene sceneID="vkW-mb-jlM">
             <objects>
-                <viewController id="08H-bI-Mfg" customClass="ViewDetailBtcController" sceneMemberID="viewController">
+                <viewController id="08H-bI-Mfg" customClass="ViewDetailBtcController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GRD-9x-zFU"/>
                         <viewControllerLayoutGuide type="bottom" id="Umf-EK-lst"/>
@@ -221,7 +222,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="2ia-A0-VqK" secondAttribute="leading" id="EKA-NC-bnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2ia-A0-VqK" secondAttribute="trailing" id="HHg-zN-Foi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nkD-yY-5al" secondAttribute="trailing" id="KDp-PR-mWc"/>
                             <constraint firstItem="nkD-yY-5al" firstAttribute="top" secondItem="GRD-9x-zFU" secondAttribute="bottom" constant="190" id="MLq-iq-08U"/>
@@ -247,6 +247,7 @@
                     </view>
                     <connections>
                         <outlet property="btnCalc" destination="j9o-dB-ZkA" id="3MP-JK-P71"/>
+                        <outlet property="btnCalcBtc" destination="j9o-dB-ZkA" id="N9g-1L-wIy"/>
                         <outlet property="inputBitcoinValue" destination="nkD-yY-5al" id="cQq-Wr-7A3"/>
                         <outlet property="inputBtcValue" destination="nkD-yY-5al" id="wi0-9h-gzT"/>
                         <outlet property="resultLabel" destination="Fwe-kb-ak6" id="Rn8-7W-eJY"/>
