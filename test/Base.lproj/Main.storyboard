@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -99,29 +99,27 @@
                             <userLayoutGuide location="215" affinity="maxY"/>
                         </userGuides>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
-                                <rect key="frame" x="0.0" y="354" width="600" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Calcular">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ran-ig-RsJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ran-ig-RsJ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="290"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-q9-yLA">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-q9-yLA">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="27.5"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.61176470589999998" green="0.53333333329999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="o9f-I9-wTB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
-                                        <rect key="frame" x="0.0" y="262" width="600" height="28"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
+                                        <rect key="frame" x="0.0" y="262" width="49" height="28"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="l3O-6w-XEE"/>
+                                        </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -129,11 +127,46 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="H1u-q9-yLA" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="PB1-Rg-lTZ"/>
+                                    <constraint firstItem="x7N-mT-Vqc" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="bnL-yc-XUt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PB1-Rg-lTZ"/>
+                                        <exclude reference="bnL-yc-XUt"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
+                                <rect key="frame" x="0.0" y="354" width="600" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ran-ig-RsJ" firstAttribute="leading" secondItem="0Fk-hQ-oCj" secondAttribute="leadingMargin" constant="-20" id="5eu-Mf-FBa"/>
+                            <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="bottom" id="BIz-2M-BIu"/>
+                            <constraint firstItem="AiF-5M-lNV" firstAttribute="top" secondItem="DcE-P7-RGP" secondAttribute="bottom" constant="216" id="Lkp-WW-F9S"/>
+                            <constraint firstItem="DcE-P7-RGP" firstAttribute="leading" secondItem="0Fk-hQ-oCj" secondAttribute="leadingMargin" constant="-20" id="T6v-oj-63M"/>
+                            <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="bottom" id="UFQ-cU-MDx"/>
+                            <constraint firstItem="ran-ig-RsJ" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" id="gEY-w3-Qgm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DcE-P7-RGP" secondAttribute="trailing" constant="-20" id="t5v-DX-1YZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ran-ig-RsJ" secondAttribute="trailing" constant="-20" id="wV6-2C-WGP"/>
+                            <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="bottom" id="xSm-lw-1ec"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UFQ-cU-MDx"/>
+                                <exclude reference="xSm-lw-1ec"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="btnCalc" destination="DcE-P7-RGP" id="XYa-ZY-F2n"/>
@@ -176,7 +209,7 @@
                                     <constraint firstAttribute="height" constant="50" id="sgx-xa-teC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="JWZ-5o-RE1">
