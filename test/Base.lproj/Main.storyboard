@@ -96,48 +96,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="215" affinity="maxY"/>
+                            <userLayoutGuide location="216" affinity="maxY"/>
                         </userGuides>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ran-ig-RsJ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="290"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-q9-yLA">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="27.5"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.61176470589999998" green="0.53333333329999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="o9f-I9-wTB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
-                                        <rect key="frame" x="0.0" y="262" width="49" height="28"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="49" id="l3O-6w-XEE"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="H1u-q9-yLA" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="PB1-Rg-lTZ"/>
-                                    <constraint firstItem="x7N-mT-Vqc" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="bnL-yc-XUt"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="PB1-Rg-lTZ"/>
-                                        <exclude reference="bnL-yc-XUt"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
                                 <rect key="frame" x="0.0" y="354" width="600" height="30"/>
                                 <animations/>
@@ -146,6 +107,63 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ran-ig-RsJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="290"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
+                                        <rect key="frame" x="0.0" y="262" width="600" height="28"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="l3O-6w-XEE"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="l3O-6w-XEE"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-q9-yLA">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="27.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.61176470589999998" green="0.53333333329999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="o9f-I9-wTB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="o9f-I9-wTB"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="H1u-q9-yLA" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="PB1-Rg-lTZ"/>
+                                    <constraint firstItem="x7N-mT-Vqc" firstAttribute="height" secondItem="H1u-q9-yLA" secondAttribute="height" id="Sva-fb-rRz"/>
+                                    <constraint firstAttribute="trailing" secondItem="x7N-mT-Vqc" secondAttribute="trailing" id="T56-8G-VO6"/>
+                                    <constraint firstItem="x7N-mT-Vqc" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leadingMargin" id="bnL-yc-XUt"/>
+                                    <constraint firstItem="x7N-mT-Vqc" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leading" id="cGd-SJ-9II"/>
+                                    <constraint firstItem="H1u-q9-yLA" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="top" id="coG-wq-Wxa"/>
+                                    <constraint firstAttribute="trailing" secondItem="H1u-q9-yLA" secondAttribute="trailing" id="fbj-cR-aZa"/>
+                                    <constraint firstItem="H1u-q9-yLA" firstAttribute="leading" secondItem="ran-ig-RsJ" secondAttribute="leading" id="tnX-82-DBx"/>
+                                    <constraint firstAttribute="bottom" secondItem="x7N-mT-Vqc" secondAttribute="bottom" id="zpi-Z3-Vlh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PB1-Rg-lTZ"/>
+                                        <exclude reference="Sva-fb-rRz"/>
+                                        <exclude reference="bnL-yc-XUt"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,6 +188,8 @@
                     </view>
                     <connections>
                         <outlet property="btnCalc" destination="DcE-P7-RGP" id="XYa-ZY-F2n"/>
+                        <outlet property="inputPesosValue" destination="x7N-mT-Vqc" id="6Xz-7f-xbI"/>
+                        <outlet property="resultView" destination="H1u-q9-yLA" id="6X0-hA-N29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKc-6c-5rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
