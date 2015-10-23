@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7CE31D071BD9A7D000DB6FBC /* CotizadorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31D061BD9A7D000DB6FBC /* CotizadorService.swift */; settings = {ASSET_TAGS = (); }; };
+		7CE31D071BD9A7D000DB6FBC /* CotizadorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31D061BD9A7D000DB6FBC /* CotizadorService.swift */; };
 		D56DA7231BC8549400FA29B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DA7221BC8549400FA29B3 /* AppDelegate.swift */; };
 		D56DA7251BC8549400FA29B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DA7241BC8549400FA29B3 /* ViewController.swift */; };
 		D56DA7281BC8549400FA29B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56DA7261BC8549400FA29B3 /* Main.storyboard */; };
@@ -15,8 +15,8 @@
 		D56DA72D1BC8549400FA29B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56DA72B1BC8549400FA29B3 /* LaunchScreen.storyboard */; };
 		D56DA7381BC8549400FA29B3 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DA7371BC8549400FA29B3 /* testTests.swift */; };
 		D56DA7431BC8549400FA29B3 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DA7421BC8549400FA29B3 /* testUITests.swift */; };
-		D5FF09A11BCEFA6200665FDA /* ViewDetailArsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF09A01BCEFA6200665FDA /* ViewDetailArsController.swift */; settings = {ASSET_TAGS = (); }; };
-		D5FF09A31BD02F8700665FDA /* ViewDetailBtcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF09A21BD02F8700665FDA /* ViewDetailBtcController.swift */; settings = {ASSET_TAGS = (); }; };
+		D5A173701BDACEA800DE59A7 /* ViewDetailBtcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1736F1BDACEA800DE59A7 /* ViewDetailBtcController.swift */; };
+		D5FF09A11BCEFA6200665FDA /* ViewDetailArsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF09A01BCEFA6200665FDA /* ViewDetailArsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		D56DA73E1BC8549400FA29B3 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56DA7421BC8549400FA29B3 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		D56DA7441BC8549400FA29B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5A1736F1BDACEA800DE59A7 /* ViewDetailBtcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailBtcController.swift; sourceTree = "<group>"; };
 		D5FF09A01BCEFA6200665FDA /* ViewDetailArsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailArsController.swift; sourceTree = "<group>"; };
-		D5FF09A21BD02F8700665FDA /* ViewDetailBtcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailBtcController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			children = (
 				D56DA7241BC8549400FA29B3 /* ViewController.swift */,
 				D5FF09A01BCEFA6200665FDA /* ViewDetailArsController.swift */,
-				D5FF09A21BD02F8700665FDA /* ViewDetailBtcController.swift */,
+				D5A1736F1BDACEA800DE59A7 /* ViewDetailBtcController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 			files = (
 				D5FF09A11BCEFA6200665FDA /* ViewDetailArsController.swift in Sources */,
 				D56DA7251BC8549400FA29B3 /* ViewController.swift in Sources */,
+				D5A173701BDACEA800DE59A7 /* ViewDetailBtcController.swift in Sources */,
 				7CE31D071BD9A7D000DB6FBC /* CotizadorService.swift in Sources */,
 				D56DA7231BC8549400FA29B3 /* AppDelegate.swift in Sources */,
-				D5FF09A31BD02F8700665FDA /* ViewDetailBtcController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
