@@ -64,7 +64,7 @@ class ViewDetailArsController: UIViewController {
         return decimalAsDouble
     }
     
-    /*
+    /* OLD CODE
     func btnClicked(sender: UIButton) {
         // tomamos el valor
         let sumaCalc: String = inputPesosValue.text!
