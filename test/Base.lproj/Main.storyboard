@@ -95,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.61176470589999998" green="0.53333333329999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -104,7 +104,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
@@ -128,6 +128,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Fjy-NM-ov6"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -150,7 +151,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnCalc" destination="DcE-P7-RGP" id="XYa-ZY-F2n"/>
                         <outlet property="inputPesosValue" destination="x7N-mT-Vqc" id="6Xz-7f-xbI"/>
                         <outlet property="resultView" destination="H1u-q9-yLA" id="6X0-hA-N29"/>
                     </connections>
@@ -204,7 +204,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.65098039220000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -213,7 +213,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
@@ -237,13 +237,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Qce-ef-VYS"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="calcularBtcValue:" destination="RqN-5X-XfB" eventType="touchUpInside" id="5Nh-RJ-Blv"/>
-                                    <action selector="clickCalcularBTC:" destination="RqN-5X-XfB" eventType="touchUpInside" id="GYR-Iy-rAS"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -259,12 +256,6 @@
                             <constraint firstItem="8hw-bS-Zoe" firstAttribute="leading" secondItem="j6e-nb-wd4" secondAttribute="leadingMargin" constant="-20" id="vOh-62-Bbo"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="btnCalc" destination="t45-Gt-P3N" id="P0s-Q2-UO9"/>
-                        <outlet property="inputBTC" destination="qSH-7h-kJG" id="KzQ-hE-Xga"/>
-                        <outlet property="inputPesosValue" destination="qSH-7h-kJG" id="h7B-7R-Njx"/>
-                        <outlet property="resultView" destination="nFZ-pJ-hLz" id="qo9-aJ-pxI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2z9-PD-AJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
