@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCy-kZ-msW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -96,41 +95,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="216" affinity="maxY"/>
+                            <userLayoutGuide location="235" affinity="maxY"/>
                         </userGuides>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
-                                <rect key="frame" x="0.0" y="354" width="600" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Calcular">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickCalcularBTC:" destination="UV3-ML-2JX" eventType="touchUpInside" id="Z4h-oo-xiP"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ran-ig-RsJ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="290"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="260"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
-                                        <rect key="frame" x="0.0" y="144.5" width="600" height="145"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="49" id="l3O-6w-XEE"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="l3O-6w-XEE"/>
-                                            </mask>
-                                        </variation>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-q9-yLA">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.61176470589999998" green="0.53333333329999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -145,6 +117,22 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-mT-Vqc">
+                                        <rect key="frame" x="0.0" y="130" width="600" height="130"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.57802025339999996" blue="0.37580507969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="l3O-6w-XEE"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="l3O-6w-XEE"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,6 +147,20 @@
                                     <constraint firstAttribute="bottom" secondItem="x7N-mT-Vqc" secondAttribute="bottom" id="zpi-Z3-Vlh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-P7-RGP">
+                                <rect key="frame" x="0.0" y="324" width="600" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fjy-NM-ov6"/>
+                                </constraints>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCalcularBTC:" destination="UV3-ML-2JX" eventType="touchUpInside" id="Z4h-oo-xiP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +168,7 @@
                         <constraints>
                             <constraint firstItem="ran-ig-RsJ" firstAttribute="leading" secondItem="0Fk-hQ-oCj" secondAttribute="leadingMargin" constant="-20" id="5eu-Mf-FBa"/>
                             <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="bottom" id="BIz-2M-BIu"/>
-                            <constraint firstItem="AiF-5M-lNV" firstAttribute="top" secondItem="DcE-P7-RGP" secondAttribute="bottom" constant="216" id="Lkp-WW-F9S"/>
+                            <constraint firstItem="AiF-5M-lNV" firstAttribute="top" secondItem="DcE-P7-RGP" secondAttribute="bottom" constant="236" id="Lkp-WW-F9S"/>
                             <constraint firstItem="DcE-P7-RGP" firstAttribute="leading" secondItem="0Fk-hQ-oCj" secondAttribute="leadingMargin" constant="-20" id="T6v-oj-63M"/>
                             <constraint firstItem="DcE-P7-RGP" firstAttribute="top" secondItem="ran-ig-RsJ" secondAttribute="bottom" id="UFQ-cU-MDx"/>
                             <constraint firstItem="ran-ig-RsJ" firstAttribute="top" secondItem="fVY-K5-daI" secondAttribute="bottom" id="gEY-w3-Qgm"/>

@@ -46,7 +46,7 @@ class ViewDetailArsController: UIViewController {
         if let valorNumerico = convertirADouble(sumaACalc, utilizaPuntoDeMiles: false) {
             let calculo = valorNumerico * contizacionActual
         
-            resultView.text = "\(calculo)"
+            resultView.text = "$ \(calculo) ARS"
         } else {
             resultView.text = "Es necesario ingresar un numero"
         }
