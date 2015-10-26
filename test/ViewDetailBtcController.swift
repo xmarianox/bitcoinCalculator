@@ -10,26 +10,55 @@ import UIKit
 
 class ViewDetailBtcController: UIViewController {
 
+    @IBOutlet weak var resultView: UILabel!
+    @IBOutlet weak var inputUsdValue: UITextField!
+    var cotizacionActual: Double!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
+            let cotizador = CotizadorService()
+            let miCotizacion = cotizador.getCotizacionAtAlias("USD")
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.cotizacionActual = miCotizacion
+            }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // se muestra el teclado
+        inputUsdValue.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func clickBtnCalc(sender: UIButton) {
+        let suma = inputUsdValue.text!
+        
+        if let valorNumerico = convertirADouble(suma, utilizaPuntoDeMiles: false) {
+            let calculo = valorNumerico * cotizacionActual
+            
+            resultView.text = "\(calculo) U$D"
+        } else {
+            resultView.text = "Es necesario ingresar un número"
+        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    func convertirADouble(valor: String, utilizaPuntoDeMiles: Bool) -> Double? {
+        
+        let formatter = NSNumberFormatter()
+        formatter.usesGroupingSeparator = utilizaPuntoDeMiles
+        formatter.locale = NSLocale.currentLocale()
+        
+        let decimalAsDouble = formatter.numberFromString(valor)?.doubleValue
+        
+        return decimalAsDouble
+    }
 
 }

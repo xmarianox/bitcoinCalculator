@@ -241,6 +241,9 @@
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickBtnCalc:" destination="RqN-5X-XfB" eventType="touchUpInside" id="sNl-NF-6GB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -256,6 +259,10 @@
                             <constraint firstItem="8hw-bS-Zoe" firstAttribute="leading" secondItem="j6e-nb-wd4" secondAttribute="leadingMargin" constant="-20" id="vOh-62-Bbo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputUsdValue" destination="qSH-7h-kJG" id="ur6-4f-fz6"/>
+                        <outlet property="resultView" destination="nFZ-pJ-hLz" id="AJF-8C-vtH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2z9-PD-AJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

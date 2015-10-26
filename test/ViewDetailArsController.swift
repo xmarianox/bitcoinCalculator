@@ -11,7 +11,6 @@ import UIKit
 class ViewDetailArsController: UIViewController {
     
     @IBOutlet weak var inputPesosValue: UITextField!
-    @IBOutlet weak var btnCalc: UIButton!
     @IBOutlet weak var resultView: UILabel!
     var contizacionActual: Double!
     
@@ -48,7 +47,7 @@ class ViewDetailArsController: UIViewController {
         
             resultView.text = "$ \(calculo) ARS"
         } else {
-            resultView.text = "Es necesario ingresar un numero"
+            resultView.text = "Es necesario ingresar un número"
         }
         
     }
