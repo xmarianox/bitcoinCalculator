@@ -1,26 +1,26 @@
 //
-//  ViewDetailBtcController.swift
+//  ViewDetailArsToBtcController.swift
 //  test
 //
-//  Created by Mariano Molina on 10/23/15.
+//  Created by Mariano Molina on 10/26/15.
 //  Copyright © 2015 Mariano Molina. All rights reserved.
 //
 
 import UIKit
 
-class ViewDetailBtcController: UIViewController {
+class ViewDetailArsToBtcController: UIViewController {
 
-    @IBOutlet weak var resultView: UILabel!
-    @IBOutlet weak var inputUsdValue: UITextField!
+    @IBOutlet weak var resultadoView: UILabel!
+    @IBOutlet weak var inputValue: UITextField!
     var cotizacionActual: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
-            let cotizador = CotizadorService()
-            let miCotizacion = cotizador.getCotizacionAtAlias("USD")
-            
+            let cotizadorService = CotizadorService()
+            let miCotizacion = cotizadorService.getCotizacionAtAlias("ARS")
+    
             dispatch_async(dispatch_get_main_queue()) {
                 self.cotizacionActual = miCotizacion
             }
@@ -28,24 +28,22 @@ class ViewDetailBtcController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        // se muestra el teclado
-        inputUsdValue.becomeFirstResponder()
+        inputValue.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func clickBtnCalc(sender: UIButton) {
-        let suma = inputUsdValue.text!
+    
+    @IBAction func btnCalcular(sender: UIButton) {
+        let sumaCalc = inputValue.text!
         
-        if let valorNumerico = convertirADouble(suma, utilizaPuntoDeMiles: false) {
-            let calculo = valorNumerico * cotizacionActual
+        if let valorNumerico = convertirADouble(sumaCalc, utilizaPuntoDeMiles: false) {
+            let resultado = valorNumerico / cotizacionActual
             
-            resultView.text = "\(calculo) U$D"
+            resultadoView.text = "\(resultado) BTC"
         } else {
-            resultView.text = "Es necesario ingresar un número"
+            resultadoView.text = "Es necesario ingresar un número"
         }
     }
     

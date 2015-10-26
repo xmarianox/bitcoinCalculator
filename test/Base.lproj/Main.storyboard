@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1889" y="39"/>
         </scene>
-        <!--View Controller-->
+        <!--View Detail Ars To Btc Controller-->
         <scene sceneID="zNp-3i-fSV">
             <objects>
-                <viewController id="o3M-My-aKg" sceneMemberID="viewController">
+                <viewController id="o3M-My-aKg" customClass="ViewDetailArsToBtcController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DRk-r9-rD1"/>
                         <viewControllerLayoutGuide type="bottom" id="406-bz-lwi"/>
@@ -208,7 +208,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-BT-JlT">
                                 <rect key="frame" x="0.0" y="64" width="600" height="260"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-O6-G76">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-O6-G76">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.79607843140000001" green="0.23529411759999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -250,6 +250,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnCalcular:" destination="o3M-My-aKg" eventType="touchUpInside" id="6fZ-Z9-1bS"/>
                                     <action selector="clickCalcularBTC:" destination="UV3-ML-2JX" eventType="touchUpInside" id="bRs-37-WGL"/>
                                 </connections>
                             </button>
@@ -274,6 +275,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="inputValue" destination="PYD-sf-9Hh" id="e8G-ba-wvq"/>
+                        <outlet property="resultadoView" destination="hsA-O6-G76" id="6O6-hh-gRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VT-Xp-fXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,10 +393,10 @@
             </objects>
             <point key="canvasLocation" x="1889" y="814"/>
         </scene>
-        <!--View Controller-->
+        <!--View Detail Usd To Btc Controller-->
         <scene sceneID="BOL-P7-G6h">
             <objects>
-                <viewController id="rWL-mj-kjH" sceneMemberID="viewController">
+                <viewController id="rWL-mj-kjH" customClass="ViewDetailUsdToBtcController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="avw-JF-NDX"/>
                         <viewControllerLayoutGuide type="bottom" id="rIj-dy-MQR"/>
@@ -412,6 +417,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnCalcular:" destination="rWL-mj-kjH" eventType="touchUpInside" id="2Yt-a3-AJh"/>
                                     <action selector="clickBtnCalc:" destination="RqN-5X-XfB" eventType="touchUpInside" id="bC5-zi-5oL"/>
                                 </connections>
                             </button>
@@ -461,6 +467,10 @@
                             <constraint firstItem="ARI-hc-hbp" firstAttribute="top" secondItem="XVS-yx-kao" secondAttribute="bottom" id="z87-lo-VXM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputValue" destination="g2N-7y-Kyr" id="dMf-jx-Xp3"/>
+                        <outlet property="labelResultado" destination="Izv-j8-E1Q" id="C2f-FZ-aHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z72-Jp-TiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
