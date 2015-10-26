@@ -17,19 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eP7-CQ-nxP">
-                                <rect key="frame" x="0.0" y="293" width="600" height="60"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.30980392159999998" green="0.65098039220000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="eCX-am-j4v"/>
-                                </constraints>
-                                <state key="normal" title="Calcular de BTC a USD"/>
-                                <connections>
-                                    <segue destination="RqN-5X-XfB" kind="show" id="bcF-0k-Zgu"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitcoin_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vtm-gY-72Y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="300" image="Bitcoin_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vtm-gY-72Y">
                                 <rect key="frame" x="180" y="89" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -37,34 +25,80 @@
                                     <constraint firstAttribute="height" constant="128" id="vRT-hh-WVx"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-s2-lzT">
-                                <rect key="frame" x="0.0" y="225" width="600" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPm-Bb-bd9">
+                                <rect key="frame" x="0.0" y="217" width="600" height="383"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-s2-lzT">
+                                        <rect key="frame" x="-20" y="0.0" width="640" height="96"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.390355909" blue="0.075648901739999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Calcular de BTC a ARS"/>
+                                        <connections>
+                                            <segue destination="UV3-ML-2JX" kind="show" id="sfO-GE-zh3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihu-r4-Hsw">
+                                        <rect key="frame" x="0.0" y="96" width="600" height="96"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.79607843140000001" green="0.23529411759999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Calcular de ARS a BTC"/>
+                                        <connections>
+                                            <segue destination="o3M-My-aKg" kind="show" id="jo7-8c-AKW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eP7-CQ-nxP">
+                                        <rect key="frame" x="0.0" y="192" width="600" height="95"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.30980392159999998" green="0.65098039220000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Calcular de BTC a USD"/>
+                                        <connections>
+                                            <segue destination="RqN-5X-XfB" kind="show" id="bcF-0k-Zgu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxk-Gc-VfY">
+                                        <rect key="frame" x="-20" y="287" width="640" height="96"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.52549019610000003" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Calcular de USD a BTC"/>
+                                        <connections>
+                                            <segue destination="rWL-mj-kjH" kind="show" id="iFK-68-u69"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.390355909" blue="0.075648901739999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="6Kz-hw-Bv9"/>
+                                    <constraint firstItem="Ihu-r4-Hsw" firstAttribute="height" secondItem="VdV-s2-lzT" secondAttribute="height" id="05c-fn-hLT"/>
+                                    <constraint firstItem="Wxk-Gc-VfY" firstAttribute="top" secondItem="eP7-CQ-nxP" secondAttribute="bottom" id="2fK-el-T9j"/>
+                                    <constraint firstItem="VdV-s2-lzT" firstAttribute="height" secondItem="Ihu-r4-Hsw" secondAttribute="height" id="5LX-Y3-Xpa"/>
+                                    <constraint firstAttribute="trailing" secondItem="VdV-s2-lzT" secondAttribute="trailing" constant="-20" id="7DL-t8-wEd"/>
+                                    <constraint firstItem="Wxk-Gc-VfY" firstAttribute="height" secondItem="eP7-CQ-nxP" secondAttribute="height" id="9B0-kL-AS7"/>
+                                    <constraint firstItem="eP7-CQ-nxP" firstAttribute="leading" secondItem="hPm-Bb-bd9" secondAttribute="leading" id="9Eh-sg-iCP"/>
+                                    <constraint firstItem="Wxk-Gc-VfY" firstAttribute="height" secondItem="VdV-s2-lzT" secondAttribute="height" id="AP2-18-nmQ"/>
+                                    <constraint firstItem="eP7-CQ-nxP" firstAttribute="top" secondItem="Ihu-r4-Hsw" secondAttribute="bottom" id="CE2-0x-Bn8"/>
+                                    <constraint firstItem="Ihu-r4-Hsw" firstAttribute="top" secondItem="VdV-s2-lzT" secondAttribute="bottom" id="ITF-5b-i5W"/>
+                                    <constraint firstItem="VdV-s2-lzT" firstAttribute="leading" secondItem="hPm-Bb-bd9" secondAttribute="leading" constant="-20" id="LXB-5x-vtI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wxk-Gc-VfY" secondAttribute="bottom" id="MCh-at-u7V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ihu-r4-Hsw" secondAttribute="trailing" id="OgH-Mu-aIP"/>
+                                    <constraint firstItem="VdV-s2-lzT" firstAttribute="top" secondItem="hPm-Bb-bd9" secondAttribute="top" id="UKR-Ut-D0l"/>
+                                    <constraint firstItem="Wxk-Gc-VfY" firstAttribute="leading" secondItem="hPm-Bb-bd9" secondAttribute="leading" constant="-20" id="XWx-aD-CaN"/>
+                                    <constraint firstItem="Ihu-r4-Hsw" firstAttribute="leading" secondItem="hPm-Bb-bd9" secondAttribute="leading" id="hsh-cY-Lt5"/>
+                                    <constraint firstAttribute="trailing" secondItem="eP7-CQ-nxP" secondAttribute="trailing" id="kVM-mx-77o"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wxk-Gc-VfY" secondAttribute="trailing" constant="-20" id="pBq-br-I5u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Calcular de BTC a ARS"/>
-                                <connections>
-                                    <segue destination="UV3-ML-2JX" kind="show" id="sfO-GE-zh3"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VdV-s2-lzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="OjM-dE-uu2"/>
-                            <constraint firstItem="eP7-CQ-nxP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="229" id="dPC-1u-1G7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VdV-s2-lzT" secondAttribute="trailing" constant="-20" id="fUV-vf-MFE"/>
-                            <constraint firstItem="VdV-s2-lzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gKE-Cz-YeQ"/>
+                            <constraint firstItem="hPm-Bb-bd9" firstAttribute="top" secondItem="vtm-gY-72Y" secondAttribute="bottom" id="2Qz-bL-ega"/>
+                            <constraint firstItem="hPm-Bb-bd9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4FU-GU-Qvt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hPm-Bb-bd9" secondAttribute="trailing" constant="-20" id="Deb-Ff-DH9"/>
                             <constraint firstItem="vtm-gY-72Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="i9P-KO-u0T"/>
                             <constraint firstItem="vtm-gY-72Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iq7-Yp-UmG"/>
-                            <constraint firstItem="VdV-s2-lzT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="161" id="lkU-Ec-po0"/>
-                            <constraint firstItem="eP7-CQ-nxP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mpS-1r-w0z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eP7-CQ-nxP" secondAttribute="trailing" constant="-20" id="s7Q-j6-393"/>
-                            <constraint firstItem="eP7-CQ-nxP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="srG-tF-qEX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hPm-Bb-bd9" secondAttribute="bottom" id="yJX-SD-Kvg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bitcoin Calculator" id="wSs-T3-qad"/>
@@ -157,7 +191,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKc-6c-5rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1953" y="40"/>
+            <point key="canvasLocation" x="1889" y="39"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zNp-3i-fSV">
+            <objects>
+                <viewController id="o3M-My-aKg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DRk-r9-rD1"/>
+                        <viewControllerLayoutGuide type="bottom" id="406-bz-lwi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2c4-w5-7jj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-BT-JlT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-O6-G76">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.79607843140000001" green="0.23529411759999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-sf-9Hh">
+                                        <rect key="frame" x="0.0" y="130" width="600" height="130"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.3803921569" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PYD-sf-9Hh" secondAttribute="bottom" id="4zT-8H-AqM"/>
+                                    <constraint firstItem="hsA-O6-G76" firstAttribute="leading" secondItem="8VD-BT-JlT" secondAttribute="leading" id="HNJ-D6-w2t"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYD-sf-9Hh" secondAttribute="trailing" id="JL5-2j-Bj0"/>
+                                    <constraint firstItem="PYD-sf-9Hh" firstAttribute="leading" secondItem="8VD-BT-JlT" secondAttribute="leading" id="TVk-GV-y8R"/>
+                                    <constraint firstItem="PYD-sf-9Hh" firstAttribute="height" secondItem="hsA-O6-G76" secondAttribute="height" id="YOu-8x-Bpf"/>
+                                    <constraint firstItem="hsA-O6-G76" firstAttribute="top" secondItem="8VD-BT-JlT" secondAttribute="top" id="YuY-zi-n8K"/>
+                                    <constraint firstItem="PYD-sf-9Hh" firstAttribute="top" secondItem="hsA-O6-G76" secondAttribute="bottom" id="uem-T2-OPx"/>
+                                    <constraint firstAttribute="trailing" secondItem="hsA-O6-G76" secondAttribute="trailing" id="vGC-1Y-Se5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-iW-DdM">
+                                <rect key="frame" x="0.0" y="324" width="600" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RKc-Zy-ZCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCalcularBTC:" destination="UV3-ML-2JX" eventType="touchUpInside" id="bRs-37-WGL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XhE-iW-DdM" firstAttribute="leading" secondItem="2c4-w5-7jj" secondAttribute="leading" id="Bq4-SG-sNV"/>
+                            <constraint firstItem="8VD-BT-JlT" firstAttribute="top" secondItem="DRk-r9-rD1" secondAttribute="bottom" id="Oob-fB-5P8"/>
+                            <constraint firstItem="406-bz-lwi" firstAttribute="top" secondItem="XhE-iW-DdM" secondAttribute="bottom" constant="236" id="dAg-H9-xZd"/>
+                            <constraint firstItem="XhE-iW-DdM" firstAttribute="trailing" secondItem="8VD-BT-JlT" secondAttribute="trailing" id="jXb-wa-jZJ"/>
+                            <constraint firstItem="8VD-BT-JlT" firstAttribute="leading" secondItem="2c4-w5-7jj" secondAttribute="leadingMargin" constant="-20" id="oMC-5M-QEf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8VD-BT-JlT" secondAttribute="trailing" constant="-20" id="qgi-Nc-SAu"/>
+                            <constraint firstItem="XhE-iW-DdM" firstAttribute="leading" secondItem="8VD-BT-JlT" secondAttribute="leading" id="rCN-uU-fYc"/>
+                            <constraint firstItem="XhE-iW-DdM" firstAttribute="top" secondItem="8VD-BT-JlT" secondAttribute="bottom" id="sgQ-Ks-e39"/>
+                            <constraint firstAttribute="trailing" secondItem="XhE-iW-DdM" secondAttribute="trailing" id="ygw-qj-dIW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jXb-wa-jZJ"/>
+                                <exclude reference="rCN-uU-fYc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VT-Xp-fXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iKY-jA-VZv">
@@ -266,7 +386,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2z9-PD-AJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1953" y="761"/>
+            <point key="canvasLocation" x="1889" y="814"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BOL-P7-G6h">
+            <objects>
+                <viewController id="rWL-mj-kjH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="avw-JF-NDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="rIj-dy-MQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7kE-KP-1Nd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-hc-hbp">
+                                <rect key="frame" x="0.0" y="324" width="600" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.76470588240000004" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XRA-fq-Cbo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBtnCalc:" destination="RqN-5X-XfB" eventType="touchUpInside" id="bC5-zi-5oL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-yx-kao">
+                                <rect key="frame" x="0.0" y="64" width="600" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-j8-E1Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.52549019610000003" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-7y-Kyr">
+                                        <rect key="frame" x="0.0" y="130" width="600" height="130"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.30980392159999998" green="0.65098039220000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Izv-j8-E1Q" secondAttribute="trailing" id="CxV-MY-8rX"/>
+                                    <constraint firstAttribute="bottom" secondItem="g2N-7y-Kyr" secondAttribute="bottom" id="Dlo-ZR-ceX"/>
+                                    <constraint firstItem="g2N-7y-Kyr" firstAttribute="height" secondItem="Izv-j8-E1Q" secondAttribute="height" id="eEn-dE-oOy"/>
+                                    <constraint firstItem="Izv-j8-E1Q" firstAttribute="top" secondItem="XVS-yx-kao" secondAttribute="top" id="fvO-Nj-hQN"/>
+                                    <constraint firstItem="g2N-7y-Kyr" firstAttribute="top" secondItem="Izv-j8-E1Q" secondAttribute="bottom" id="hGX-D1-sfv"/>
+                                    <constraint firstItem="g2N-7y-Kyr" firstAttribute="leading" secondItem="XVS-yx-kao" secondAttribute="leading" id="pVu-MS-FcH"/>
+                                    <constraint firstAttribute="trailing" secondItem="g2N-7y-Kyr" secondAttribute="trailing" id="sak-uD-lGu"/>
+                                    <constraint firstItem="Izv-j8-E1Q" firstAttribute="leading" secondItem="XVS-yx-kao" secondAttribute="leading" id="snV-wk-X9Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XVS-yx-kao" firstAttribute="leading" secondItem="7kE-KP-1Nd" secondAttribute="leadingMargin" constant="-20" id="Ep1-Js-bsN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ARI-hc-hbp" secondAttribute="trailing" constant="-20" id="Uoi-8r-sb8"/>
+                            <constraint firstItem="XVS-yx-kao" firstAttribute="top" secondItem="avw-JF-NDX" secondAttribute="bottom" id="amD-0t-hkg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XVS-yx-kao" secondAttribute="trailing" constant="-20" id="fVg-C7-yMd"/>
+                            <constraint firstItem="rIj-dy-MQR" firstAttribute="top" secondItem="ARI-hc-hbp" secondAttribute="bottom" constant="236" id="l1q-oj-euk"/>
+                            <constraint firstItem="ARI-hc-hbp" firstAttribute="leading" secondItem="7kE-KP-1Nd" secondAttribute="leadingMargin" constant="-20" id="wla-mu-hNs"/>
+                            <constraint firstItem="ARI-hc-hbp" firstAttribute="top" secondItem="XVS-yx-kao" secondAttribute="bottom" id="z87-lo-VXM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z72-Jp-TiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="814"/>
         </scene>
     </scenes>
     <resources>
